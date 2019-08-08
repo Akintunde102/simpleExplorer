@@ -1,6 +1,7 @@
-import React from 'react';
+import * as React from 'react';
 import styles from './App.scss';
 import { FaFolder } from 'react-icons/fa';
+import { isDir } from '../ui/usables/isDir';
 import * as fs from 'fs';
 
 interface ExplorerProps {
@@ -11,15 +12,6 @@ interface ExplorerProps {
     setToOpen: Function;
 }
 
-const isDir = ({ dir, file }: { dir: string; file: string | null }): boolean => {
-    try {
-        const status = fs.statSync(`${dir}\\${file}`);
-        return status.isDirectory();
-    } catch (error) {
-        return false;
-    }
-};
-
 const explorer: React.FunctionComponent<ExplorerProps> = ({
     location,
     setLocation,
@@ -27,6 +19,8 @@ const explorer: React.FunctionComponent<ExplorerProps> = ({
     setPresentDir,
     setToOpen,
 }: ExplorerProps) => {
+    
+    console.log('Explorer');
     const getFiles = (location: string): string[] => {
         const files = fs.readdirSync(location);
         return files;
@@ -54,7 +48,9 @@ const explorer: React.FunctionComponent<ExplorerProps> = ({
     const getIcon = (type: string) => {
         if (type === 'folder') {
             return <FaFolder />;
-        } else return false;
+        } else {
+            return false;
+        }
     };
 
     return (

@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import DefaultFormat from './DefaultFormat';
+import * as React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 interface FormatProps {
     input: string;
@@ -8,11 +8,12 @@ interface FormatProps {
 }
 
 const Format: React.FunctionComponent<FormatProps> = ({ input, type }: FormatProps) => {
-    let formatted = <DefaultFormat input={input} />;
-    if (type === 'md') {
-        formatted = <ReactMarkdown source={input} />;
-    }
-    return formatted;
+    console.log('FORMAT');
+    return (
+        <SyntaxHighlighter language={type} style={docco}>
+            {input}
+        </SyntaxHighlighter>
+    );
 };
 
 export default Format;
