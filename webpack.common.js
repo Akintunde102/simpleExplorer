@@ -105,7 +105,7 @@ const sharedConfig = {
                 include: path.join(__dirname, 'node_modules'),
             },
             {
-                test: /\.(eot|woff|woff2|ttf)([?]?.*)$/,
+                test: /\.(otf|eot|woff|woff2|ttf)([?]?.*)$/,
                 use: [
                     {
                         loader: 'file-loader',

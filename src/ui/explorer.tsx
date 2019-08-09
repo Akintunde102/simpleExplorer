@@ -10,6 +10,7 @@ interface ExplorerProps {
     presentDir: string;
     setPresentDir: Function;
     setToOpen: Function;
+    pourFile: Function;
 }
 
 const explorer: React.FunctionComponent<ExplorerProps> = ({
@@ -18,8 +19,8 @@ const explorer: React.FunctionComponent<ExplorerProps> = ({
     presentDir,
     setPresentDir,
     setToOpen,
+    pourFile,
 }: ExplorerProps) => {
-    
     console.log('Explorer');
     const getFiles = (location: string): string[] => {
         const files = fs.readdirSync(location);
@@ -41,6 +42,7 @@ const explorer: React.FunctionComponent<ExplorerProps> = ({
             setPresentDir(fullDir);
         } else {
             setToOpen(`${presentDir}\\${file}`);
+            pourFile(`${presentDir}\\${file}`);
         }
         setLocation(fullDir);
     };
