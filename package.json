@@ -1,14 +1,13 @@
 {
-  "name": "museeks",
-  "productName": "Museeks",
-  "version": "0.11.1",
-  "description": "A simple, clean and cross-platform music player, written with Node.js, Electron and React.js.",
+  "name": "simepleExplorer",
+  "productName": "SimpleExplorer",
+  "description": "A simple Explorer built with Node.js, Electron and React.js.",
   "main": "./dist/main/bundle.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/martpie/museeks"
+    "url": "https://github.com/akintunde102/simpleExplorer"
   },
-  "author": "Pierre de la Martinière <pierre.de.la.martiniere@gmail.com>",
+  "author": "Akintunde Jegede <jegedeakintunde@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/martpie/museeks/issues"
@@ -30,6 +29,7 @@
     "@blueprintjs/core": "^3.18.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
+    "async-reactor": "^1.2.2",
     "bluebird": "3.5.3",
     "chardet": "0.7.0",
     "classnames": "2.2.6",
@@ -42,6 +42,7 @@
     "font-awesome": "4.7.0",
     "globby": "9.1.0",
     "history": "4.9.0",
+    "icojs": "^0.13.1",
     "iconv-lite": "0.4.24",
     "language-detect": "^1.1.0",
     "level-js": "4.0.0",

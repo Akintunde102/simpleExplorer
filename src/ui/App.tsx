@@ -18,7 +18,7 @@ const defaultViewFileInput = fs.readFileSync(defaultViewFile, 'utf8');
 
 const App = () => {
     console.log('APP');
-    const [location, setLocation] = useState('C:\\Users\\akintunde\\Desktop\\Hmmm');
+    const [location, setLocation] = useState(defaults.Folder);
     const [presentDir, setPresentDir] = useState('C:\\Users\\akintunde\\Desktop\\Hmmm');
     const [toOpen, setToOpen] = useState(defaultViewFile);
     const [openedFile, setOpenedFile] = useState({ input: '', type: '', fullPath: '' });
@@ -26,7 +26,7 @@ const App = () => {
     const pourFile = async (filePath: string): Promise<string> => {
         const fileNameArray = filePath.split('.');
         const extension = fileNameArray[fileNameArray.length - 1];
-        const unAllowed = ['jpg', 'jpeg', 'png', 'gif', 'doc'];
+        const unAllowed = defaults.FileViewerExt.concat(defaults.ReactPanZoomExt);
         let { input, type, fullPath } = { input: '', type: '', fullPath: filePath };
         if (!unAllowed.includes(extension.toLowerCase())) {
             type = detect(filePath, (err: string, language: string) => {
