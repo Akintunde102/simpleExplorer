@@ -1,3 +1,3 @@
 # Simple Explorer
 
--- Too busy to create a readme, you can create it if you want.
+-- https://dev.to/akintunde102/a-simpleexplorer-built-with-electronjs-reactjs-and-typescript-4n0k
