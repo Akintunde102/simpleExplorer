@@ -1,4 +1,4 @@
-appId: io.museeks.app
+appId: io.simplex.app
 directories:
   buildResources: "./dist"
   output: "./build"
@@ -10,7 +10,7 @@ mac:
   category: public.app-category.music
   target:
     - dmg
-  icon: src/images/logos/museeks.icns
+  icon: src/images/logos/simplex.icns
   artifactName: ${name}.${ext}
 linux:
   depends: ['libdbus-1-dev', 'libglib2.0-dev']
@@ -19,9 +19,9 @@ linux:
     - deb
     - AppImage
     - rpm
-  executableName: museeks
+  executableName: simplex
   artifactName: ${name}-${arch}.${ext}
 win:
   target: nsis
-  icon: src/images/logos/museeks.ico
+  icon: src/images/logos/simplex.ico
   artifactName: ${name}-setup.${ext}

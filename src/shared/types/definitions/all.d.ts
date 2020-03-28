@@ -7,3 +7,4 @@ declare module 'react-spinners/SyncLoader';
 declare module 'react-image-pan-zoom-rotate';
 declare module 'react-file-viewer';
 declare module 'async-reactor';
+declare module 'electron-hot-loader';

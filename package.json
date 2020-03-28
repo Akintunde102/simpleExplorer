@@ -1,5 +1,5 @@
 {
-  "name": "simepleExplorer",
+  "name": "simpleExplorer",
   "productName": "SimpleExplorer",
   "description": "A simple Explorer built with Node.js, Electron and React.js.",
   "main": "./dist/main/bundle.js",
@@ -10,15 +10,15 @@
   "author": "Akintunde Jegede <jegedeakintunde@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/martpie/museeks/issues"
+    "url": "https://github.com/akintunde102/simpleExplorer/issues"
   },
   "scripts": {
     "build": "webpack --config webpack.prod.js --env.production --colors --watch",
     "lint:ts": "tslint -p ./tsconfig.json -t stylish",
     "lint:css": "stylelint \"src/**/*.css\"",
     "dev": "webpack --config webpack.dev.js --colors --watch",
-    "museeks": "./node_modules/.bin/electron .",
-    "museeks:debug": "./node_modules/.bin/electron . --enable-logging --devtools",
+    "simplex": "./node_modules/.bin/electron .",
+    "simplex:debug": "./node_modules/.bin/electron . --enable-logging --devtools",
     "modules:rebuild": "electron-rebuild -f",
     "package:lmw": "build -lmw --ia32 --x64",
     "package:l": "build -l --ia32 --x64",
@@ -29,6 +29,7 @@
     "@blueprintjs/core": "^3.18.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
+    "acorn-dynamic-import": "^4.0.0",
     "async-reactor": "^1.2.2",
     "bluebird": "3.5.3",
     "chardet": "0.7.0",
@@ -75,7 +76,7 @@
     "react-router-dom": "5.0.0",
     "react-simple-input": "0.4.2",
     "react-spinners": "^0.5.13",
-    "react-syntax-highlighter": "^11.0.2",
+    "react-syntax-highlighter": "^12.2.1",
     "redux": "4.0.1",
     "redux-thunk": "2.3.0",
     "sass-loader": "^7.1.0",
@@ -84,6 +85,7 @@
     "teeny-conf": "4.0.0"
   },
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@types/bluebird": "3.5.26",
     "@types/chardet": "0.5.0",
     "@types/classnames": "2.2.7",
@@ -98,13 +100,14 @@
     "@types/react-router-dom": "4.3.1",
     "@types/redux-logger": "3.0.7",
     "@types/semver": "5.5.0",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
     "clean-terminal-webpack-plugin": "2.0.1",
     "css-loader": "2.1.1",
     "electron": "4.1.1",
     "electron-builder": "20.39.0",
+    "electron-hot-loader": "^0.8.0",
     "electron-rebuild": "1.8.4",
     "file-loader": "3.0.1",
-    "hiredis": "^0.5.0",
     "html-webpack-plugin": "3.2.0",
     "install": "0.12.2",
     "mini-css-extract-plugin": "0.5.0",
@@ -125,7 +128,7 @@
     "tslint-config-semistandard": "7.0.0",
     "typescript": "3.3.4000",
     "url-loader": "1.1.2",
-    "webpack": "4.29.6",
+    "webpack": "^4.28.4",
     "webpack-cli": "3.3.0",
     "webpack-merge": "4.2.1",
     "webpackbar": "3.1.5"

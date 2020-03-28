@@ -17,12 +17,10 @@ const defaultViewFile = defaults.ViewFile;
 const defaultViewFileInput = fs.readFileSync(defaultViewFile, 'utf8');
 
 const App = () => {
-    console.log('APP');
     const [location, setLocation] = useState(defaults.Folder);
-    const [presentDir, setPresentDir] = useState('C:\\Users\\akintunde\\Desktop\\Hmmm');
+    const [presentDir, setPresentDir] = useState('/home/akintunde/simpleExplorer');
     const [toOpen, setToOpen] = useState(defaultViewFile);
     const [openedFile, setOpenedFile] = useState({ input: '', type: '', fullPath: '' });
-
     const pourFile = async (filePath: string): Promise<string> => {
         const fileNameArray = filePath.split('.');
         const extension = fileNameArray[fileNameArray.length - 1];
@@ -36,18 +34,20 @@ const App = () => {
             });
             input = await readFile(filePath, 'utf8');
         }
-
         setOpenedFile({ input, type, fullPath });
         return input;
     };
 
     const back = (): void => {
-        const newLocationArray = location.split('\\');
+        const newLocationArray = location.split('/');
+        console.log(newLocationArray);
         newLocationArray.pop();
-        const newLocation = newLocationArray.join('\\');
+        const newLocation = newLocationArray.join('/');
+        console.log({newLocationArray,newLocation});
         if (newLocationArray.length > 0) {
             if (isDir({ fullLocation: newLocation })) {
                 setPresentDir(newLocation);
+                return;
             } else {
                 setToOpen(newLocation);
             }
@@ -55,11 +55,13 @@ const App = () => {
         }
     };
 
+    console.log({ location });
+
     return (
         <div className={styles.document}>
             <div className={styles.title}>
-                <a onClick={back}>
-                    <span className={styles.iconista}>{location.split('\\').length > 1 && <FaArrowLeft />}</span>
+                <a onClick={back} href="#">
+                    <span className={styles.iconista}> <FaArrowLeft /></span>
                 </a>
                 <span className={styles.titleName}>
                     <ReSlash toSlash={location} />

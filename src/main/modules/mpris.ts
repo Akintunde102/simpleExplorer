@@ -23,9 +23,9 @@ class MprisModule extends ModuleWindow {
 
   async load () {
     this.player = mpris({
-      name: 'museeks',
-      identity: 'Museeks',
-      desktopEntry: 'museeks',
+      name: 'simplex',
+      identity: 'simplex',
+      desktopEntry: 'simplex',
       canRaise: true,
       supportedUriSchemes: ['file', 'data'],
       supportedMimeTypes: SUPPORTED_TRACKS_EXTENSIONS.map(mime.lookup).filter(Boolean),

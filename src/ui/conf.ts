@@ -7,8 +7,8 @@ interface Idefault {
 }
 
 export const defaults: Idefault = {
-    Folder: 'C:\\',
-    ViewFile: 'C:\\Users\\akintunde\\museeks\\src\\ui\\usables\\defaultOpen.html',
+    Folder: '/home/akintunde/simpleExplorer/',
+    ViewFile: '/home/akintunde/simpleExplorer/src/ui/usables/defaultOpen.html',
     FileViewerExt: ['bmp', 'pdf', 'csv', 'xslx', 'docx', 'mp4', 'webm', 'mp3'],
     ReactPanZoomExt: ['jpg', 'jpeg', 'png', 'gif', 'doc'],
     ICOjs: ['ico'],

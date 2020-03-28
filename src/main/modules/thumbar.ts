@@ -1,6 +1,6 @@
 /**
  * Module in charge of the Windows Thumbar
- * (buttons appearing on Museeks preview when hovering the icon)
+ * (buttons appearing on simplex preview when hovering the icon)
  *
  * Windows only
  */

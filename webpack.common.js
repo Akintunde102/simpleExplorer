@@ -24,7 +24,7 @@ const uiConfig = {
             chunkFilename: '[id].css',
         }),
         new HtmlWebpackPlugin({
-            title: 'Museeks',
+            title: 'SimpleX',
             template: 'src/app.html',
         }),
         new WebpackBar({

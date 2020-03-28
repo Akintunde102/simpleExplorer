@@ -38,11 +38,11 @@ const explorer: React.FunctionComponent<ExplorerProps> = ({
         let file = e.currentTarget.getAttribute('data-file');
         let fullDir = presentDir;
         if (isDir({ dir: presentDir, file: file })) {
-            fullDir = `${presentDir}\\${file}`;
+            fullDir = `${presentDir}/${file}`;
             setPresentDir(fullDir);
         } else {
-            setToOpen(`${presentDir}\\${file}`);
-            pourFile(`${presentDir}\\${file}`);
+            setToOpen(`${presentDir}/${file}`);
+            pourFile(`${presentDir}/${file}`);
         }
         setLocation(fullDir);
     };

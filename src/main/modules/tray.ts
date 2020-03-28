@@ -38,9 +38,9 @@ class TrayModule extends ModuleWindow {
     const logosPath = path.resolve(path.join(__dirname, '../../src/images/logos'));
 
     const trayIcons = {
-      tray: nativeImage.createFromPath(path.join(logosPath, 'museeks-tray.png')).resize({ width: 24, height: 24 }),
-      'tray-win32': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray.ico')),
-      'tray-darwin-dark': nativeImage.createFromPath(path.join(logosPath, 'museeks-tray-dark.png'))
+      tray: nativeImage.createFromPath(path.join(logosPath, 'simplex-tray.png')).resize({ width: 24, height: 24 }),
+      'tray-win32': nativeImage.createFromPath(path.join(logosPath, 'simplex-tray.ico')),
+      'tray-darwin-dark': nativeImage.createFromPath(path.join(logosPath, 'simplex-tray-dark.png'))
     };
 
     // Make it "lightable" on macOS
@@ -65,7 +65,7 @@ class TrayModule extends ModuleWindow {
           this.trayIcon = nativeImage.createFromPath(
             path.join(
               path.resolve(path.join(__dirname, '../../src/images/logos')),
-              'museeks-tray.png'
+              'simplex-tray.png'
             )
           );
 
@@ -167,7 +167,7 @@ class TrayModule extends ModuleWindow {
 
   create () {
     this.tray = new Tray(this.trayIcon);
-    this.tray.setToolTip('Museeks');
+    this.tray.setToolTip('SimpleX');
 
     if (os.platform() === 'win32') {
       this.tray.on('click', () => {
