@@ -48,7 +48,7 @@
     "language-detect": "^1.1.0",
     "level-js": "4.0.0",
     "linvodb3": "3.26.0",
-    "lodash-es": "4.17.11",
+    "lodash-es": "4.17.14",
     "m3ujs": "0.2.1",
     "mime-types": "2.1.22",
     "mpris-service": "2.0.0",
