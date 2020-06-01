@@ -1,3 +1,7 @@
+const appRoot = process.cwd();
+
+console.log({ appRoot });
+
 interface Idefault {
     Folder: string;
     ViewFile: string;
@@ -7,8 +11,8 @@ interface Idefault {
 }
 
 export const defaults: Idefault = {
-    Folder: '/home/akintunde/simpleExplorer/',
-    ViewFile: '/home/akintunde/simpleExplorer/src/ui/usables/defaultOpen.html',
+    Folder: `${appRoot}`,
+    ViewFile: `${appRoot}/src/ui/usables/defaultOpen.html`,
     FileViewerExt: ['bmp', 'pdf', 'csv', 'xslx', 'docx', 'mp4', 'webm', 'mp3'],
     ReactPanZoomExt: ['jpg', 'jpeg', 'png', 'gif', 'doc'],
     ICOjs: ['ico'],

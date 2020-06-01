@@ -1,5 +1,5 @@
 {
-  "name": "simpleExplorer",
+  "name": "simple_explorer",
   "productName": "SimpleExplorer",
   "description": "A simple Explorer built with Node.js, Electron and React.js.",
   "main": "./dist/main/bundle.js",
@@ -30,6 +30,7 @@
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "acorn-dynamic-import": "^4.0.0",
+    "app-root-path": "^3.0.0",
     "async-reactor": "^1.2.2",
     "bluebird": "3.5.3",
     "chardet": "0.7.0",

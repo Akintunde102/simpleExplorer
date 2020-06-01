@@ -18,7 +18,7 @@ const defaultViewFileInput = fs.readFileSync(defaultViewFile, 'utf8');
 
 const App = () => {
     const [location, setLocation] = useState(defaults.Folder);
-    const [presentDir, setPresentDir] = useState('/home/akintunde/simpleExplorer');
+    const [presentDir, setPresentDir] = useState(defaults.Folder);
     const [toOpen, setToOpen] = useState(defaultViewFile);
     const [openedFile, setOpenedFile] = useState({ input: '', type: '', fullPath: '' });
     const pourFile = async (filePath: string): Promise<string> => {
