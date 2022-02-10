@@ -54,7 +54,7 @@
     "mime-types": "2.1.22",
     "mpris-service": "2.0.0",
     "music-metadata": "3.5.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "postcss-scss": "2.0.0",
     "prettier": "^1.18.2",
     "ps-node": "0.1.6",
