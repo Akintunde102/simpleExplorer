@@ -104,7 +104,7 @@
     "babel-plugin-dynamic-import-node": "^2.3.0",
     "clean-terminal-webpack-plugin": "2.0.1",
     "css-loader": "2.1.1",
-    "electron": "4.1.1",
+    "electron": "18.3.7",
     "electron-builder": "20.39.0",
     "electron-hot-loader": "^0.8.0",
     "electron-rebuild": "1.8.4",
